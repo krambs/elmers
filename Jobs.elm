@@ -40,8 +40,8 @@ type alias Job =
     , position_title : String
     , organization_name : String
     , rate_interval_code : String
-    , minimum : Int
-    , maximum : Int
+    , minimum : Float
+    , maximum : Float
     , start_date : String
     , end_date : String
     , locations : List String
@@ -144,8 +144,8 @@ decodeJob =
         `apply` ("position_title" := string)
         `apply` ("organization_name" := string)
         `apply` ("rate_interval_code" := string)
-        `apply` ("minimum" := int)
-        `apply` ("maximum" := int)
+        `apply` ("minimum" := float)
+        `apply` ("maximum" := float)
         `apply` ("start_date" := string)
         `apply` ("end_date" := string)
         `apply` ("locations" := list string)
