@@ -106,8 +106,23 @@ jobEntry job =
         , div [] [ text ("Maximum: " ++ (toString job.maximum)) ]
         , div [] [ text ("Start Date: " ++ job.start_date) ]
         , div [] [ text ("End Date: " ++ job.end_date) ]
+        , locationEntries job.locations
         , div [] [ text ("URL: " ++ job.url) ]
         ]
+
+
+locationEntries : List String -> Html Msg
+locationEntries locations =
+    div []
+        ((text "Location(s): ")
+            :: (List.map locationEntry (List.intersperse ", " locations))
+        )
+
+
+locationEntry : String -> Html Msg
+locationEntry location =
+    span []
+        [ text location ]
 
 
 
