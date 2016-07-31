@@ -1,8 +1,10 @@
-To build to HTML/JS: 
+To run:
 
-    SIMPLE HTTP EXAMPLE:
-    elm-make App.elm --output=index.html
+    Install ELM: http://elm-lang.org/install
+    Run: elm package install elm-lang/html
+    Run: elm package install evancz/elm-http
+    Run: npm install
+    Run: npm run dev
 
-    GOVERNMENT JOB LISTING SITE:
-    elm-make Jobs.elm --output=index.html
+Should give live dev server on localhost:3000
     
